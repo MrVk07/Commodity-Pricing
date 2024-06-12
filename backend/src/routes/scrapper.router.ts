@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import { scrapData } from '../modules/scrapData';
+import { scrapData } from '../modules/scrapData/scrapData';
 
 const router: Router = express.Router();
 
