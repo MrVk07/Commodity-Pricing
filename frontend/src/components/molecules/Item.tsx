@@ -1,3 +1,5 @@
+import { formatDateString } from "../../utils/formatDate";
+
 export interface ItemDetail {
     Name: string;
     Image: string;
@@ -6,7 +8,7 @@ export interface ItemDetail {
     Costliest_Market_Price: string;
     Cheapest_Market: string;
     Cheapest_Market_Price: string;
-    Latest_Price_Date: string;
+    Latest_Price_Date: Date;
 }
 
 interface ItemProps {
@@ -33,7 +35,7 @@ const Item = (props: ItemProps) => {
                 <p className="mb-2">Costliest Market Price: <strong>{item.Costliest_Market_Price}</strong></p>
                 <p className="mb-2">Cheapest Market: <strong>{item.Cheapest_Market}</strong></p>
                 <p className="mb-2">Cheapest Market Price: <strong>{item.Cheapest_Market_Price}</strong></p>
-                <p className="mb-2">Latest Price Date: <strong>{item.Latest_Price_Date}</strong></p>
+                <p className="mb-2">Latest Price Date: <strong>{formatDateString(item.Latest_Price_Date)}</strong></p>
             </div>
         </div>
     );
