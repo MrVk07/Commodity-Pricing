@@ -2,8 +2,8 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import scrapper from './routes/scrapper.router'
+import graph from './routes/graph.router'
 import { connectToDatabase } from './utils/connectDB'
-
 
 const app = express()
 
@@ -16,10 +16,11 @@ app.use(express.urlencoded({ extended: true }))
 
 connectToDatabase();
 
-app.use('/api', scrapper);
+app.use('/api/category', scrapper);
+app.use('/api', graph);
 
 app.use('/', (_req, res) => {
-    res.send("hello world");
+    res.send("HELLO WORLD");
 })
 
 app.listen(port, () => {

@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { ICommodityItem } from '../interfaces/CommodityItem';
+import { ICommodityItem } from '../interfaces/Commodity';
 
 const CommodityItemSchema = new mongoose.Schema<ICommodityItem>(
     {
@@ -8,9 +8,11 @@ const CommodityItemSchema = new mongoose.Schema<ICommodityItem>(
         Category: { type: String, required: true },
         Costliest_Market: { type: String, required: true },
         Costliest_Market_Price: { type: String, required: true },
+        Costliest_Market_State: { type: String, required: true },
         Cheapest_Market: { type: String, required: true },
         Cheapest_Market_Price: { type: String, required: true },
-        Latest_Price_Date: { type: Date, required: true }
+        Cheapest_Market_State: { type: String, required: true },
+        Latest_Price_Date: { type: Date, required: true },
     }, {
     timestamps: true
 }

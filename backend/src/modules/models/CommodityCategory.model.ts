@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { ICommodityCategory } from '../interfaces/CommodityItem';
+import { ICommodityCategory } from '../interfaces/Commodity';
 
 const CommodityCategorySchema = new mongoose.Schema<ICommodityCategory>(
     {
